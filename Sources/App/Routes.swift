@@ -20,6 +20,10 @@ final class Routes: RouteCollection {
         builder.get("info") { req in
             return req.description
         }
+        
+        builder.get("cheese") { req in
+            return try self.view.make("welcome")
+        }
 
     }
 }
